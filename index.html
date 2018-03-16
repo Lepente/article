@@ -23,7 +23,8 @@
 	<div id="text-block">
 		<div id="one" class="container">
 			<h1>Title1</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit officiis ipsa soluta ab harum voluptatibus quam enim nihil sint dignissimos, magni eveniet non mollitia possimus praesentium obcaecati iure, assumenda exercitationem? Voluptas iste corporis error sit, eius enim. Eligendi maxime rerum molestias veniam sunt, facere non et? Pariatur amet, perferendis excepturi!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit officiis ipsa soluta ab harum voluptatibus quam enim nihil sint dignissimos, magni eveniet non mollitia possimus praesentium obcaecati iure, assumenda exercitationem? Voluptas iste corporis error sit, eius enim. Eligendi maxime rerum molestias veniam sunt, facere non et? Pariatur amet, perferendis excepturi!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit officiis ipsa soluta ab harum voluptatibus quam enim nihil sint dignissimos, magni eveniet non mollitia possimus praesentium obcaecati iure, assumenda exercitationem? Voluptas iste corporis error sit, eius enim. Eligendi maxime rerum molestias veniam sunt, facere non et? Pariatur amet, perferendis excepturi!</p>
 		</div>
 		<div id="two" class="container">
 			<h1>Title2</h1>
@@ -38,7 +39,7 @@
 </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
             $(document).ready(function(){
         var $sections = $('.container');
@@ -47,7 +48,7 @@
         var $currentSection
         $sections.each(function(){
         var divPosition = $(this).offset().top;
-        if( divPosition - 1 < currentScroll ){
+        if( divPosition - 0 < currentScroll ){
         $currentSection = $(this);
         }
         var id = $currentSection.attr('id');
@@ -58,6 +59,20 @@
 
         });
         });
+        $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
     </script>
 
 </body>
