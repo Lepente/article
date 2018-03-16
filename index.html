@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Article</title>
+  </head>
+  <body>
+    <div class="main">
+    <div class="nav">
+		<ul id="top-menu">
+			<li><a href="#one" class="links">Title1</a></li>
+			<li><a href="#two" class="links">Title2</a></li>
+			<li><a href="#three" class="links">Title3</a></li>
+			<li><a href="#four" class="links">Title4</a></li>
+		</ul>
+	</div>
+	<div id="text-block">
+		<div id="one" class="container">
+			<h1>Title1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit officiis ipsa soluta ab harum voluptatibus quam enim nihil sint dignissimos, magni eveniet non mollitia possimus praesentium obcaecati iure, assumenda exercitationem? Voluptas iste corporis error sit, eius enim. Eligendi maxime rerum molestias veniam sunt, facere non et? Pariatur amet, perferendis excepturi!</p>
+		</div>
+		<div id="two" class="container">
+			<h1>Title2</h1>
+		</div>
+		<div id="three" class="container">
+			<h1>Title3</h1>
+		</div>
+		<div id="four" class="container">
+			<h1>Title4</h1>
+		</div>
+	</div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+        var $sections = $('.container');
+        $(window).scroll(function(){
+        var currentScroll = $(this).scrollTop();
+        var $currentSection
+        $sections.each(function(){
+        var divPosition = $(this).offset().top;
+        if( divPosition - 1 < currentScroll ){
+        $currentSection = $(this);
+        }
+        var id = $currentSection.attr('id');
+        $('a').removeClass('active');
+        $("[href=#"+id+"]").addClass('active');
+
+        })
+
+        });
+        });
+    </script>
+
+</body>
+</html>

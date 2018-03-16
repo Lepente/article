@@ -1,0 +1,13 @@
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+    <div class="main-box">
+      <div class="article">
+          <div id="title1">TITLE1</div>
+          <div id="title2">TITLE2</div>
+      </div>
+      <div id="myScrollspy" class="sidebar">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#titlel">Title1</a></li>
+            <li class="active"><a href="#title2">Title2</a></li>
+          </ul>
+      </div>
+    </div>
