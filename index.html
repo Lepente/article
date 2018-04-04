@@ -16,7 +16,7 @@
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-<header>
+<div class="header">
   <div class="text-wrapper">
     <h1>Levente
       Molnar</h1>
@@ -29,20 +29,90 @@
   </div>
   <div class="image-holder">
     <div class="back-box"></div>
-    <img src="images/en.png" alt="Profile pic">
+    <img id="prof" src="images/en.png" alt="Profile pic">
     <div class="front-box"></div>
   </div>
-</header>
+</div>
+
+<div class="work-holder">
+  <div class="title">Recent work</div>
+  <div class="project">
+    <div class="text">Landing</div>
+     <div class="img">
+       <img src="images/project.jpg" alt="Lensation">
+     </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</script>
 
 <script>
-function myFunction() {
-    var x = document.getElementById("myNavbar");
-    if (x.className === "navbar") {
-        x.className += " responsive";
-    } else {
-        x.className = "navbar";
+    function myFunction() {
+        var x = document.getElementById("myNavbar");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
     }
-}
+
+
+    $(document).ready(function(){
+
+        window.sr = ScrollReveal({
+          reset:false
+        });
+
+        sr.reveal('.navbar', {
+          duration: 1000,
+          origin: 'top',
+          scale: 1,
+          distance: '100px',
+          mobile: true,
+        });
+
+        sr.reveal('.text-wrapper', {
+          duration: 1000,
+          origin: 'left',
+          scale: 1,
+          distance: '100px',
+          mobile: true,
+        });
+
+        sr.reveal('.back-box', {
+          duration: 1000,
+          origin: 'right',
+          scale: 0.1,
+          distance: '100px',
+          mobile: true,
+        });
+
+        sr.reveal('.title', {
+          duration: 1000,
+          origin: 'left',
+          scale: 1,
+          distance: '100px',
+          mobile: true,
+        });
+
+        sr.reveal('.project', {
+          duration: 1000,
+          origin: 'top',
+          scale: 1,
+          distance: '100px',
+          mobile: true,
+        });
+
+        sr.reveal('#prof', {
+          duration: 1000,
+          origin: 'left',
+          scale: 1,
+          distance: '100px',
+          mobile: true,
+        });
+    });
+
 </script>
 
 </body>
