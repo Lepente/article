@@ -167,63 +167,46 @@ h1, p {
 /*  --- -- - ---- WORK SECTION -- --------*/
 
 .work-holder {
-  grid-template-columns: 0.5fr 2.5fr 0.4fr;
+  grid-template-columns: 0.8fr 2.5fr 0.8fr;
   display: grid;
-}
-
-.project {
-  display: grid;
-  grid-template-columns: 1.5fr 1.5fr;
-  grid-column: 1 / 3;
-  transition: 0.5s;
-
-}
-
-.project-wrapper {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-column: 2 / 3;
-}
-
-.text {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  align-items: flex-end;
-  grid-column: 2 / 3;
-  align-items: center;
-  padding-left: 2rem;
-  padding-top: 2rem;
-  background: #fff;
-  box-shadow: 0 4px 100px 0 rgba(0, 0, 0, 0.2);
-}
-
-.img {
-  padding: 3rem 0 3rem 0;
-}
-
-#pic {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
-  max-width: 100%;
-}
-
-.box {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-column: 1 / 2;
-  background-color: #EB5757;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  padding: 3rem 0 3rem 0;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30vh;
 }
 
 .title {
+  grid-template-columns: 0.5fr 2.5fr 0.5fr;
   margin-bottom: 3rem;
-  font-size: 65px;
   display: grid;
-  grid-column: 2 / 3;
   font-weight: bold;
 }
+
+.title h1 {
+  grid-column: 2 / 3;
+  font-size: 60px;
+}
+
+.project-wrapper {
+  grid-column: 2 / 3;
+}
+
+.project-img img {
+  box-shadow: 0 10px 100px hsla(0,0%,0%,0.3);
+}
+
+.project-info a {
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration-color: #EB5757;
+}
+
+.project-info h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 36px;
+}
+
+
+/* -------------------- MEDIA QUERIES -----------------------*/
 
 
 @media (max-width:1200px) {
@@ -259,9 +242,8 @@ h1, p {
     }
 
     .front-box {
-      width: 100%;
-      transform: rotate(0deg);
-      height: 20%;
+      width: 110%;
+      height: 30%;
     }
 
     .header {
@@ -301,19 +283,24 @@ h1, p {
       justify-self: center;
     }
 
-    .project {
-      grid-column: 1 / 4;
+    .title h1 {
+      text-align: center;
     }
+
+    .project-wrapper {
+      grid-column: 1 / -1;
+    }
+
+    .project-info {
+      text-align: center;
+    }
+
 }
 
 @media (max-width:575px) {
 
   .scroll {
     margin-bottom: 4rem;
-  }
-
-  .project {
-    grid-column:  1 / 4;
   }
 
   .img {
@@ -324,14 +311,5 @@ h1, p {
   .text-wrapper span {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-  }
-
-  .box {
-    grid-template-columns: 1fr;
-    display: none;
-  }
-
-  .project-wrapper {
-    grid-template-columns: 1fr;
   }
 }
