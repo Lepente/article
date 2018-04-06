@@ -103,6 +103,7 @@ img {
   padding-top: 0.1rem;
   padding-bottom: 3rem;
   font-style: italic;
+  color: #EB5757;
 }
 
 .text-wrapper span {
@@ -139,7 +140,7 @@ h1, p {
 .scroll {
     justify-self: center;
     font-size: 12px;
-    color: #C4C4C4;
+    color: #C4C4C4 !important;
     padding-right: 10vh;
 }
 
@@ -177,7 +178,7 @@ h1, p {
 .work-holder {
   grid-template-columns: 0.8fr 2.5fr 0.8fr;
   display: grid;
-  margin-bottom: 30vh;
+  margin-bottom: 10vh;
 }
 
 .title {
@@ -213,6 +214,35 @@ h1, p {
   font-size: 36px;
 }
 
+.contact {
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr 0.5fr;
+  margin-bottom: 3rem;
+  display: grid;
+  font-weight: bold;
+}
+
+.contact h2 {
+  font-size: 40px;
+  color: #EB5757;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 33px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.ikon {
+  height: 42px;
+  width: 42px;
+  padding: 1rem;
+}
+
+.contact h2,.contact p,.icons {
+  grid-column: 2 / 3;
+}
 
 /* -------------------- MEDIA QUERIES -----------------------*/
 
@@ -303,6 +333,10 @@ h1, p {
       text-align: center;
     }
 
+    .contact {
+      text-align: center;
+    }
+
 }
 
 @media (max-width:575px) {
@@ -319,5 +353,13 @@ h1, p {
   .text-wrapper span {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
+  }
+
+  .contact h2 {
+    font-size: 40px;
+  }
+
+  .contact p {
+    font-size: 20px;
   }
 }

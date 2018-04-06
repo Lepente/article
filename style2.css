@@ -62,3 +62,106 @@ body {
     text-align: left;
   }
 }
+
+/* ------------------- ABOUT SECTION ----------------*/
+
+.text-wrapper {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 2fr;
+  grid-template-rows: repeat(10,auto);
+  align-self: flex-start;
+  top: 20%;
+}
+
+.text-wrapper h1 {
+  grid-column: 2 /3;
+  font-size: 75px;
+  margin: 0;
+  grid-row: 1 / 2;
+}
+
+.text-wrapper h2 {
+  grid-column: 2 /3;
+  font-size: 45px;
+  margin: 0;
+  padding-bottom: 1rem;
+  color: #EB5757;
+}
+
+.icons {
+  grid-column: 2 / 3;
+}
+
+img {
+  height: 42px;
+  width: 42px;
+  padding: 1rem;
+}
+
+.text-wrapper p {
+  grid-column: 2 / 3;
+  font-size: 40px;
+  font-style: italic;
+  margin: 0;
+  padding-bottom: 2rem;
+  color: #EB5757;
+}
+
+.text-wrapper span {
+  grid-column: 2 / 3;
+  padding-bottom: 2rem;
+  font-size: 28px;
+  padding-right: 2rem;
+}
+
+
+.box {
+  border-top-left-radius: 100px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+  background: #EB5757;
+  grid-row: 1 / -1;
+  grid-column: 3 / -1;
+}
+
+.white-box {
+  background: #fff;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  border-top-left-radius: 100px;
+}
+
+/* --------------------- MEDIA QUERIES --------------*/
+
+@media (max-width:767px) {
+  .navbar {
+    position: relative;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width:575px) {
+  .text-wrapper {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+  }
+
+  .text-wrapper h1 {
+    font-size: 40px;
+  }
+
+  .text-wrapper h2 {
+    font-size: 28px;
+  }
+
+  .text-wrapper p {
+    font-size: 28px;
+  }
+
+  .text-wrapper span {
+    font-size: 20px;
+    padding-right: 0;
+  }
+}

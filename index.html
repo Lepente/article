@@ -48,6 +48,15 @@
   </div>
 </div>
 
+<div id="contact" class="contact">
+  <h2>Drop me a line</h2>
+  <p>molnar.levente773@gmail.com</p>
+  <div class="icons">
+    <a href="#"><img class="ikon" src="images/linkedin.svg" alt="LinkedIn"></a>
+    <a href="#"><img class="ikon" src="images/behance.svg" alt="Behance"></a>
+    <a href="#"><img class="ikon" src="images/dribbble.svg" alt="Dribbble"></a>
+  </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </script>
@@ -117,8 +126,37 @@
           mobile: true,
         });
 
+        sr.reveal('#prof', {
+          duration: 1000,
+          origin: 'top',
+          scale: 1,
+          distance: '100px',
+          mobile: true,
+        });
+
     });
 
+</script>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script>
+    $(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 </script>
 
 </body>
